@@ -1,10 +1,24 @@
-var json = {"d":[  {"__type":"Service1.Operators:#MobileWCFService","operators":"ACCOUNTING"},   {"__type":"Service1.Operators:#MobileWCFService","operators":"AHOFFMAN"},   {"__type":"Service1.Operators:#MobileWCFService","operators":"AMONROY"},   {"__type":"Service1.Operators:#MobileWCFService","operators":"APATENTAS"},
-    {"__type":"Service1.Operators:#MobileWCFService","operators":"WRAMOS    "}
+var json = {"d":[  
+			{"profession":"Berserker"},
+			{"profession":"Shadow Hunter"},
+			{"profession":"Gunslinger"},
+			{"profession":"Bard"},
+			{"profession":"Paladin"},
+			{"profession":"Gunlancer"},
+			{"profession":"Scrapper"},
+			{"profession":"SoulFist"},
+			{"profession":"Sorceress"},
+			{"profession":"Sharpshooter"},
+			{"profession":"Deathblade"},
+			{"profession":"Wardancer"},
+			{"profession":"Striker"},
+			{"profession":"Deadeye"},
+			{"profession":"Artillerist"}
 ]};
 
 $(document).ready(function() {
     var $grouplist = $('#checkboxes');
     $.each(json.d, function() {
-        $('<label>'+this.operators+': </label><input type=checkbox value='+this.operators+'/>').appendTo($grouplist);
+        $('<label>'+this.profession+': </label><input type=checkbox value='+this.profession+'/>').appendTo($grouplist);
     });
 });
