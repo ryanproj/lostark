@@ -23,15 +23,17 @@ var bigdata = {
       "syn_type": "damage burst",
       "Skill": "red dust",
       "syn": "12% damage",
-      "duration": "6 sec",
+	  "synvalue": 12,
+      "duration": 6,
       "uptime": "low"
     },
     {
       "class": "shadowhunter",
       "syn_type": "damage burst",
       "skill": "howl",
-      "syn": "12% damage",
-      "duration": "6 sec",
+      "syn": "12% damage"
+	  "synvalue": 12,
+      "duration": 6,
       "uptime": "low"
     },
     {
@@ -39,7 +41,8 @@ var bigdata = {
       "syn_type": "damage burst",
       "skill": "shout of hatred",
       "sync": "3% damage, 9% head/back attack damage",
-      "duration": "12 seconds",
+	  "synvalue": 3.9,
+      "duration": 12,
       "uptime": "low"
     },
     {
