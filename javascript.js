@@ -326,6 +326,9 @@ $(document).ready(function() {
 	
 	console.log('class list' + classList);
 	
+	//create set to dedupe classList
+	let uniqueClasses = [...new Set(classList)];
+	
     var $grouplist = $('#checkboxes');
     $.each(professions.d, function() {
         $('<label><input type=checkbox name='+this.profession+' value='+this.profession+'/> ' +this.profession+'</label>').appendTo($grouplist);
@@ -334,6 +337,11 @@ $(document).ready(function() {
 	var $grouplist = $('#checkboxes2');
     $.each(bigdata.synergies, function() {
         $('<label><input type=checkbox name='+this.class+' value='+this.class+'/> ' +this.class+'</label>').appendTo($grouplist);
+    });
+	
+	var $grouplist = $('#checkboxes3');
+    $.each(uniqueClasses, function(index, value) {
+        $('<label><input type=checkbox name='+this.value+' value='+this.value+'/> ' +this.value+'</label>').appendTo($grouplist);
     });
 	
 	var checkboxElems = document.querySelectorAll("input[type='checkbox']");
