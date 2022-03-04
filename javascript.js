@@ -59,7 +59,7 @@ function displayCheck(e) {
 
   //totalElem.innerText = total;
   selclass.innerHTML = result.join("");
-  */
+  
 }
 
 // called onclick of  beauty products checkboxes
