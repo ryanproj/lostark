@@ -17,7 +17,7 @@ var professions = {"d":[
 ]};
 
 var selections = {};
-
+var selclass = document.getElementById("selected-classes");
 
 $(document).ready(function() {
     var $grouplist = $('#checkboxes');
@@ -36,15 +36,15 @@ $(document).ready(function() {
 
 function displayCheck(e) {
 	console.log('From the event listener');
-	/*
+	
   if (e.target.checked) {
-    selections[e.target.id] = {
+    selections[e.target.name] = {
       name: e.target.name,
       value: e.target.value
     };
   } 
   else {
-    delete selections[e.target.id];
+    delete selections[e.target.name];
   }
 
   var result = [];
@@ -54,11 +54,11 @@ function displayCheck(e) {
     var listItem = "<li>" + selections[key].name + " " +
                    selections[key].value + "</li>";
     result.push(listItem);
-    total += parseInt(selections[key].value.substring(1));
+    //total += parseInt(selections[key].value.substring(1));
   }
 
-  totalElem.innerText = total;
-  seatsElem.innerHTML = result.join("");
+  //totalElem.innerText = total;
+  selclass.innerHTML = result.join("");
   */
 }
 
