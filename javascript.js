@@ -17,13 +17,17 @@ var professions = {"d":[
 ]};
 
 var selections = {};
-var checkboxElems = document.querySelectorAll("input[type='checkbox']");
+
 
 $(document).ready(function() {
     var $grouplist = $('#checkboxes');
     $.each(professions.d, function() {
         $('<label><input type=checkbox name='+this.profession+' value='+this.profession+'/> ' +this.profession+'</label>').appendTo($grouplist);
     });
+	
+	var checkboxElems = document.querySelectorAll("input[type='checkbox']");
+	
+	console.log('From the the ready function');
 	
 	for (var i = 0; i < checkboxElems.length; i++) {
 	checkboxElems[i].addEventListener("click", displayCheck);
