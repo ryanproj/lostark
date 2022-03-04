@@ -324,10 +324,10 @@ $(document).ready(function() {
 		}
 	}
 	
-	console.log('class list' + classList);
+	console.log('class list' + classlist);
 	
 	//create set to dedupe classList
-	let uniqueClasses = [...new Set(classList)];
+	let uniqueClasses = [...new Set(classlist)];
 	
     var $grouplist = $('#checkboxes');
     $.each(professions.d, function() {
