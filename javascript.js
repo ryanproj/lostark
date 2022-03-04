@@ -16,12 +16,47 @@ var professions = {"d":[
 			{"profession":"Artillerist"}
 ]};
 
+var selections = {};
+var checkboxElems = document.querySelectorAll("input[type='checkbox']");
+
 $(document).ready(function() {
     var $grouplist = $('#checkboxes');
     $.each(professions.d, function() {
         $('<label><input type=checkbox name='+this.profession+' value='+this.profession+'/> ' +this.profession+'</label>').appendTo($grouplist);
     });
+	
+	for (var i = 0; i < checkboxElems.length; i++) {
+	checkboxElems[i].addEventListener("click", displayCheck);
+}
 });
+
+function displayCheck(e) {
+	console.log('From the event listener');
+	/*
+  if (e.target.checked) {
+    selections[e.target.id] = {
+      name: e.target.name,
+      value: e.target.value
+    };
+  } 
+  else {
+    delete selections[e.target.id];
+  }
+
+  var result = [];
+  var total = 0;
+
+  for (var key in selections) {
+    var listItem = "<li>" + selections[key].name + " " +
+                   selections[key].value + "</li>";
+    result.push(listItem);
+    total += parseInt(selections[key].value.substring(1));
+  }
+
+  totalElem.innerText = total;
+  seatsElem.innerHTML = result.join("");
+  */
+}
 
 // called onclick of  beauty products checkboxes
 function updateCost(e) {
