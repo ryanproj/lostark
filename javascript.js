@@ -307,17 +307,24 @@ var bigdata = {
 };
 
 var selections = {};
+var classlist = [];
 var selclass = document.getElementById("selected-classes");
 
 $(document).ready(function() {
 	
+	//loop for each syngery 
 	for (var i=0; i<bigdata.synergies.length; i++) {
+		//loop for each element within the syngery
 		for (var key in bigdata.synergies[i]) {
-			for (var j= 0; j<bigdata.synergies[i][key].length; j++) {
-				console.log(bigdata.synergies[i][key][j])
-			}
+			classlist.push(bigdata.synergies[i][key].class);
+			console.log('syngery' + bigdata.synergies[i][key].syn);
+			//for (var j= 0; j<bigdata.synergies[i][key].length; j++) {
+			//	console.log(bigdata.synergies[i][key][j])
+			//}
 		}
 	}
+	
+	console.log('class list' + classList);
 	
     var $grouplist = $('#checkboxes');
     $.each(professions.d, function() {
