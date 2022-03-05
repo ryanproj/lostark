@@ -7,28 +7,56 @@
 
 .flex-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   font-size: 15px;
   text-align: center;
 }
 
-.flex-item-left {
-  background-color: #f1f1f1;
-  padding: 10px;
-  border: 4px groove;
-  flex: 30%;
+.flex-container-right {
+  
 }
 
-.flex-item-right {
-  background-color: dodgerblue;
-  padding: 10px;
+.flex-item-top {
+  background: #f1f1f1;
+  display: flex;
   border: 4px groove;
-  flex: 70%;
+  flex-direction: row;
+  margin-left: 0px;
+}
+
+.flex-item-bottom {
+  display: flex;
+  background: dodgerblue;
+  border: 4px groove;
+  flex-direction: row;
+  
+  margin-left: 0px
+}
+
+.flex-item-bottom li {
+ font-size:13px;
+}
+
+.flex-item-bottom ul {
+  display: block;
+  list-style-type: disc;
+  margin-top: 1em;
+  margin-bottom: 1 em;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 15px;
+}
+
+.flex-item-top-row{
+  border: 1px solid;
+  text-align: left;
+  flex-basis: 600px;
 }
 
 .syn-divs {
-  border-color: white;
-  border: 2px solid;
+  border: 1px solid;
+  text-align: left;
+  flex: 1;
 }
 
 /* Responsive layout - makes a one column-layout instead of two-column layout */
@@ -54,22 +82,21 @@ Crit Rate and burst oriented synergies can be extremely powerful if properly uti
 
 </div>
 <div class="flex-container">
-  <div class="flex-item-left">
-	<div class="syn-divs">
-			<ul id="checkboxes3"><b>Select classes =></b></ul>
-			
-	</div></br>
-	<div class="syn-divs">
-			<b>Totals</b>
-			<ul id="totalsyns"></ul>
-			
+  <div class="flex-item-top">
+	<div class="flex-item-top-row">
+		<ul id="checkboxes3"><b>Select classes =></b></ul>
 	</div>
-		
+	<div "flex-item-top-row">
+		<b>Totals</b>
+		<ul id="totalsyns"></ul>
+	</div>
   </div>
-  <div class="flex-item-right">
+
+		<div class="flex-item-bottom">
+  
 	<div class="syn-divs">
 		<b>Burst Damage</b>
-		<div id="burst-damage"></div>
+		<p id="burst-damage"></p>
 	</div></br>
 	<div class="syn-divs">
 		<b>Constant Damage</b>
@@ -118,7 +145,8 @@ Crit Rate and burst oriented synergies can be extremely powerful if properly uti
 		<div id="mp-regen"></div>	
 	</div></br>
   </div>
-</div>
+
+  </div>
   <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="javascript.js"></script>
   </body>
