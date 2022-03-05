@@ -1,26 +1,111 @@
 <html>
-  <head></head>
-  <body>
-  
-  
-  <h2> hello world</h2>
-  <form>
-	<fieldset>
-		<div id="checkboxes"> Old JSON Select classes =>
-		</div>
+  <head>
+  <style>
+* {
+  box-sizing: border-box;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  font-size: 15px;
+  text-align: center;
+}
+
+.flex-item-left {
+  background-color: #f1f1f1;
+  padding: 10px;
+  border: 4px groove;
+  flex: 30%;
+}
+
+.flex-item-right {
+  background-color: dodgerblue;
+  padding: 10px;
+  border: 4px groove;
+  flex: 70%;
+}
+
+.syn-divs {
+  border-color: white;
+  border: 2px solid;
+}
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+<div class="flex-container">
+  <div class="flex-item-left">
+	<div class="syn-divs">
+			<ul id="checkboxes3"><b>Select classes =></b></ul>
+			
+	</div></br>
+	<div class="syn-divs">
+			<b>Totals</b>
+			<ul id="totalsyns"></ul>
+			
+	</div>
 		
-		<div id="checkboxes2"> New JSON Select classes =>
-		</div>
-		
-		<div id="checkboxes3"> Unique Class Array Select classes =>
-		</div>
-		
-		<p class="syns">
-			<div id="synoutput"> </div>
-		</p>
-		<ul id="selected-classes"></ul>
-	<fieldset>
-  </form>
+  </div>
+  <div class="flex-item-right">
+	<div class="syn-divs">
+		<b>Burst Damage</b>
+		<div id="burst-damage"></div>
+	</div></br>
+	<div class="syn-divs">
+		<b>Constant Damage</b>
+		<div id="constant-damage"></div>
+	</div></br>
+	<div class="syn-divs">
+		<b>Burst Crit</b>
+		<div id="burst-crit"></div>
+	</div></br>
+	<div class="syn-divs">
+		<b>Constant Crit</b>
+		<div id="constant-crit"></div>	
+	</div></br>
+	
+	<div class="syn-divs">
+		<b>Head/Back Damage</b>
+		<div id="head-back-damage"></div>
+	</div></br>
+	<div class="syn-divs">
+		<b>Defense Reduction</b>
+		<div id="def-reduce"></div>
+	</div></br>
+	<div class="syn-divs">
+		<b>Movement Speed</b>
+		<div id="move-speed"></div>
+	</div></br>
+	<div class="syn-divs">
+		<b>Attack Speed</b>
+		<div id="attack-speed"></div>	
+	</div></br>
+	
+	<div class="syn-divs">
+		<b>Shield</b>
+		<div id="shield"></div>
+	</div></br>
+	<div class="syn-divs">
+		<b>Damage Reduction</b>
+		<div id="damage-reduce"></div>
+	</div></br>
+	<div class="syn-divs">
+		<b>Stagger Damage</b>
+		<div id="stagger-damage"></div>
+	</div></br>
+	<div class="syn-divs">
+		<b>Mana Regen</b>
+		<div id="mp-regen"></div>	
+	</div></br>
+  </div>
+</div>
   <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="javascript.js"></script>
   </body>
