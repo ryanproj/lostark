@@ -537,7 +537,6 @@ function displayCheck(e) {
 	
 	var listItem = "<li>" + selections[key].name + "</li>";
     result.push(listItem);
-    //total += parseInt(selections[key].value.substring(1));
   }
 
 	const sumBurstCrit 		= 	totalBurstCrit.reduce((a, b) => a + b);
